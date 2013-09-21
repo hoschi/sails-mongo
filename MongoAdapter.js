@@ -121,7 +121,7 @@ module.exports = (function() {
       }, dbs[collectionName], cb);
     },
 
-    identity: 'sails-mongo'
+    identity: 'sails-mongo-hoschi'
   };
 
   function spawnConnection(logic, config, cb) {
@@ -165,7 +165,7 @@ module.exports = (function() {
     }
     return options;
   }
-  
+
   // Rewrite values when used with Atomic operators
   function rewriteValues(values){
         var _values = {};
@@ -192,10 +192,12 @@ module.exports = (function() {
         obj[key] = false;
       else if (val === "true")
         obj[key] = true;
-      else if (!_.isNaN(Date.parse(val)))
+      else if (_.isDate(val) && !_.isNaN(Date.parse(val)))
         obj[key] = new Date(val);
       else if (_.isObject(val))
         obj[key] = parseTypes(val); // Nested objects...
+	  else
+		obj[key] = val;
     });
 
     return obj;

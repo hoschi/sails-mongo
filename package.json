@@ -1,7 +1,7 @@
 {
-  "name": "sails-mongo",
-  "version": "0.0.3",
-  "description": "Mongo DB adapter for Sails.js",
+  "name": "sails-mongo-hoschi",
+  "version": "0.8.4",
+  "description": "Mongo DB adapter for Sails.js, which works for 0.8.4. See also sails-mongo package.",
   "main": "MongoAdapter.js",
   "scripts": {
     "test": "mocha"
@@ -14,16 +14,8 @@
   ],
   "contributors": [
     {
-      "name": "Robin Persson",
-      "email": "rprssn@gmail.com"
-    },
-    {
-      "name": "Ted Kulp",
-      "email": "github@wishy.org"
-    },
-    {
-      "name": "Mike McNeil",
-      "email": "mike@balderdash.co"
+      "name": "Stefan Gojan",
+      "email": "vollekannehoschi@gmail.com"
     }
   ],
   "license": "MIT",
